@@ -319,8 +319,7 @@ def main():
         print("\n*** AT LEAST ONE PROFILE HAS POSSIBLE SLOTS ***")
     else:
         print("\nNo slots found in this run.")
-
-  if __name__ == "__main__":
-    send_telegram("TEST", "Telegram
-connection is working!")
-    main()    
+    
+if __name__ == "__main__":
+    send_telegram("TEST", "Telegram connection is working!")
+    main()
