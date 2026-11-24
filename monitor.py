@@ -34,8 +34,8 @@ from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, WebDriverException
 
+BASE_URL = "https://icp.administracionelectronica.gob.es/icpplus/index.html"
 
-BASE_URL = "https://sede.administracionespublicas.gob.es/icpplus/index.html"
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 PROFILES_FILE = os.path.join(DATA_DIR, "profiles.json")
