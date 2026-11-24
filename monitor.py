@@ -306,9 +306,8 @@ def main():
                 f"needed, use Autofill (Tampermonkey), solve CAPTCHA + SMS, "
                 f"and submit FAST - slots disappear in seconds!"
             )
-        
-          send_email(subject, body)
-          send_telegram(subject, body)
+                    send_email(subject, body)
+                    send_telegram(subject, body)
   
 
         # Small pause between profiles to avoid hammering the site back-to-back
