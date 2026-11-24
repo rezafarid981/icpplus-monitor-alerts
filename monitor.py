@@ -118,7 +118,11 @@ def check_appointments(driver, profile: dict, log) -> tuple[bool, str]:
         human_delay()
     except TimeoutException:
         pass
+    log(f"Current URL: {driver.current_url}")
+    log(f"Page title: {driver.title}")
 
+    for item in driver.find_elements(By.TAG_NAME, "select"):
+    log(f"SELECT id={item.get_attribute('id')} name={item.get_attribute('name')}")
     log(f"Selecting province '{profile['province']}'...")
     province_select = Select(wait_for(driver, By.ID, sel["province_select_id"]))
     province_select.select_by_visible_text(profile["province"])
