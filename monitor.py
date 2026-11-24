@@ -305,11 +305,10 @@ def main():
                 f"Open this link, redo province/procedure selection if "
                 f"needed, use Autofill (Tampermonkey), solve CAPTCHA + SMS, "
                 f"and submit FAST - slots disappear in seconds!"
-            )
-                    send_email(subject, body)
-                    send_telegram(subject, body)
-  
-
+            )         
+            
+            send_email(subject, body)
+            send_telegram(subject, body)
         # Small pause between profiles to avoid hammering the site back-to-back
         human_delay(1.5, 3)
 
