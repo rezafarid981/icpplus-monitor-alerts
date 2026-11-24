@@ -176,6 +176,30 @@ def send_email(subject: str, body: str) -> None:
     except Exception as e:
         print(f"Email send error: {e}")
 
+def send_telegram(subject: str, body: str) -> None:
+    import urllib.parse
+    import urllib.request
+
+    token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+    chat_id = os.environ.get("TELEGRAM_CHAT_ID", "")
+
+    if not token or not chat_id:
+        print("Telegram not configured - skipping notification.")
+        return
+
+    try:
+        message = f"{subject}\n\n{body}"
+        url = f"https://api.telegram.org/bot{token}/sendMessage"
+        data = urllib.parse.urlencode({
+            "chat_id": chat_id,
+            "text": message
+        }).encode("utf-8")
+
+        request = urllib.request.Request(url, data=data)
+        with urllib.request.urlopen(request, timeout=30) as response:
+            print("Telegram notification sent.")
+    except Exception as e:
+        print(f"Telegram send error: {e}")
 
 def load_profiles() -> list:
     with open(PROFILES_FILE, "r", encoding="utf-8") as f:
@@ -282,7 +306,10 @@ def main():
                 f"needed, use Autofill (Tampermonkey), solve CAPTCHA + SMS, "
                 f"and submit FAST - slots disappear in seconds!"
             )
-            send_email(subject, body)
+        
+          send_email(subject, body)
+          send_telegram(subject, body)
+  
 
         # Small pause between profiles to avoid hammering the site back-to-back
         human_delay(1.5, 3)
