@@ -6,10 +6,10 @@
       "procedure_name": "POLICÍA-TOMA DE HUELLAS (EXPEDICIÓN DE TARJETA) INICIAL, RENOVACIÓN, DUPLICADO Y LEY 14/2013",
       "status": "error",
       "url": null,
-      "last_check": "2026-11-25T01:05:10+00:00",
+      "last_check": "2026-11-25T01:20:23+00:00",
       "logs": [
-        "[01:03:10] Opening ICPPLUS home page...",
-        "[01:05:10] Browser/WebDriver error: Message: timeout: Timed out receiving message from renderer: -0.002\n  (Session info: chrome=157.0.8103.78)\nStacktrace:\n#0 0x627460ea1caa <unknown>\n#1 0x6274607d5cc5 <unknown>\n#2 0x6274607c5b32 <unknown>\n#3 0x6274607c58a6 <unknown>\n#4 0x6274607c402b <unknown>\n#5 0x6274607c443f <unknown>\n#6 0x6274607cf9d6 <unknown>\n#7 0x6274607e0b90 <unknown>\n#8 0x6274607e699b <unknown>\n#9 0x6274607c4d17 <unknown>\n#10 0x6274607c4a38 <unknown>\n#11 0x6274607e0a53 <unknown>\n#12 0x62746085760d <unknown>\n#13 0x627460812557 <unknown>\n#14 0x62746081186e <unknown>\n#15 0x627460812341 <unknown>\n#16 0x627460e6479c <unknown>\n#17 0x627460e62fcd <unknown>\n#18 0x627460e4ddf5 <unknown>\n#19 0x627460e63c0a <unknown>\n#20 0x627460e36b99 <unknown>\n#21 0x627460e8c318 <unknown>\n#22 0x627460e8c4b5 <unknown>\n#23 0x627460ea0633 <unknown>\n#24 0x75a8640abdeb <unknown>\n#25 0x75a86413f4dc <unknown>\n"
+        "[01:18:23] Opening ICPPLUS home page...",
+        "[01:20:23] Browser/WebDriver error: Message: timeout: Timed out receiving message from renderer: -0.002\n  (Session info: chrome=157.0.8103.78)\nStacktrace:\n#0 0x62deeaff2caa <unknown>\n#1 0x62deea926cc5 <unknown>\n#2 0x62deea916b32 <unknown>\n#3 0x62deea9168a6 <unknown>\n#4 0x62deea91502b <unknown>\n#5 0x62deea91543f <unknown>\n#6 0x62deea9209d6 <unknown>\n#7 0x62deea931b90 <unknown>\n#8 0x62deea93799b <unknown>\n#9 0x62deea915d17 <unknown>\n#10 0x62deea915a38 <unknown>\n#11 0x62deea931a53 <unknown>\n#12 0x62deea9a860d <unknown>\n#13 0x62deea963557 <unknown>\n#14 0x62deea96286e <unknown>\n#15 0x62deea963341 <unknown>\n#16 0x62deeafb579c <unknown>\n#17 0x62deeafb3fcd <unknown>\n#18 0x62deeaf9edf5 <unknown>\n#19 0x62deeafb4c0a <unknown>\n#20 0x62deeaf87b99 <unknown>\n#21 0x62deeafdd318 <unknown>\n#22 0x62deeafdd4b5 <unknown>\n#23 0x62deeaff1633 <unknown>\n#24 0x734bc06abdeb <unknown>\n#25 0x734bc073f4dc <unknown>\n"
       ]
     },
     "client2": {
@@ -18,12 +18,12 @@
       "procedure_name": "POLICÍA-TOMA DE HUELLAS (EXPEDICIÓN DE TARJETA) INICIAL, RENOVACIÓN, DUPLICADO Y LEY 14/2013",
       "status": "error",
       "url": null,
-      "last_check": "2026-11-25T01:07:13+00:00",
+      "last_check": "2026-11-25T01:22:26+00:00",
       "logs": [
-        "[01:05:13] Opening ICPPLUS home page...",
-        "[01:07:13] Browser/WebDriver error: Message: timeout: Timed out receiving message from renderer: -0.002\n  (Session info: chrome=157.0.8103.78)\nStacktrace:\n#0 0x5a16ff577caa <unknown>\n#1 0x5a16feeabcc5 <unknown>\n#2 0x5a16fee9bb32 <unknown>\n#3 0x5a16fee9b8a6 <unknown>\n#4 0x5a16fee9a02b <unknown>\n#5 0x5a16fee9a43f <unknown>\n#6 0x5a16feea59d6 <unknown>\n#7 0x5a16feeb6b90 <unknown>\n#8 0x5a16feebc99b <unknown>\n#9 0x5a16fee9ad17 <unknown>\n#10 0x5a16fee9aa38 <unknown>\n#11 0x5a16feeb6a53 <unknown>\n#12 0x5a16fef2d60d <unknown>\n#13 0x5a16feee8557 <unknown>\n#14 0x5a16feee786e <unknown>\n#15 0x5a16feee8341 <unknown>\n#16 0x5a16ff53a79c <unknown>\n#17 0x5a16ff538fcd <unknown>\n#18 0x5a16ff523df5 <unknown>\n#19 0x5a16ff539c0a <unknown>\n#20 0x5a16ff50cb99 <unknown>\n#21 0x5a16ff562318 <unknown>\n#22 0x5a16ff5624b5 <unknown>\n#23 0x5a16ff576633 <unknown>\n#24 0x7267706abdeb <unknown>\n#25 0x72677073f4dc <unknown>\n"
+        "[01:20:26] Opening ICPPLUS home page...",
+        "[01:22:26] Browser/WebDriver error: Message: timeout: Timed out receiving message from renderer: -0.002\n  (Session info: chrome=157.0.8103.78)\nStacktrace:\n#0 0x624db12ffcaa <unknown>\n#1 0x624db0c33cc5 <unknown>\n#2 0x624db0c23b32 <unknown>\n#3 0x624db0c238a6 <unknown>\n#4 0x624db0c2202b <unknown>\n#5 0x624db0c2243f <unknown>\n#6 0x624db0c2d9d6 <unknown>\n#7 0x624db0c3eb90 <unknown>\n#8 0x624db0c4499b <unknown>\n#9 0x624db0c22d17 <unknown>\n#10 0x624db0c22a38 <unknown>\n#11 0x624db0c3ea53 <unknown>\n#12 0x624db0cb560d <unknown>\n#13 0x624db0c70557 <unknown>\n#14 0x624db0c6f86e <unknown>\n#15 0x624db0c70341 <unknown>\n#16 0x624db12c279c <unknown>\n#17 0x624db12c0fcd <unknown>\n#18 0x624db12abdf5 <unknown>\n#19 0x624db12c1c0a <unknown>\n#20 0x624db1294b99 <unknown>\n#21 0x624db12ea318 <unknown>\n#22 0x624db12ea4b5 <unknown>\n#23 0x624db12fe633 <unknown>\n#24 0x71fd70eabdeb <unknown>\n#25 0x71fd70f3f4dc <unknown>\n"
       ]
     }
   },
-  "last_run": "2026-11-25T01:07:15+00:00"
+  "last_run": "2026-11-25T01:22:29+00:00"
 }
