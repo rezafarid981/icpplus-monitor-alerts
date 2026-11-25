@@ -1,0 +1,38 @@
+name: ICPPLUS Network Test - Windows
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: windows-latest
+    timeout-minutes: 3
+    steps:
+      - name: Test general HTTPS access
+        shell: pwsh
+        run: |
+          Write-Host "Testing Google HTTPS..."
+          curl.exe -I -L --max-time 15 "https://www.google.com"
+          Write-Host "GOOGLE_CURL_EXIT=$LASTEXITCODE"
+
+      - name: Test ICPPLUS HTTPS access
+        shell: pwsh
+        run: |
+          $url = "https://icp.administracionelectronica.gob.es/icpplustieb/citar?p=8&locale=es"
+          Write-Host "Testing ICPPLUS from Windows GitHub-hosted runner..."
+          curl.exe -sS -L --max-time 25 -o "$env:TEMP\icpplus.html" -w "HTTP_STATUS=%{http_code}`nREMOTE_IP=%{remote_ip}`nDNS_TIME=%{time_namelookup}s`nCONNECT_TIME=%{time_connect}s`nTOTAL_TIME=%{time_total}s`n" "$url"
+          $curlExit = $LASTEXITCODE
+          Write-Host "ICPPLUS_CURL_EXIT=$curlExit"
+          if (Test-Path "$env:TEMP\icpplus.html") {
+            $bytes = (Get-Item "$env:TEMP\icpplus.html").Length
+            Write-Host "BODY_BYTES=$bytes"
+            Get-Content "$env:TEMP\icpplus.html" -TotalCount 8
+          }
+          if ($curlExit -ne 0) {
+            Write-Host "RESULT=CONNECTION_FAILED"
+          } else {
+            Write-Host "RESULT=HTTP_RESPONSE_RECEIVED"
+          }
