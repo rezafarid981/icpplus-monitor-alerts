@@ -138,32 +138,39 @@ def check_appointments(driver, profile: dict, log) -> tuple[bool, str]:
     wait_and_click(driver, By.XPATH, sel["no_cert_link_xpath"])
     human_delay(2, 4)
 
-    log(f"Selecting procedure '{profile['procedure_name']}'...")
-    tramite_select = Select(wait_for(driver, By.ID, sel["tramite_select_id"]))
-    tramite_select.select_by_visible_text(profile["procedure_name"])
-    human_delay()
-    wait_and_click(driver, By.ID, sel["tramite_submit_id"])
+        log("Selecting Barcelona office...")
+    oficina = Select(wait_for(driver, By.ID, "sede", timeout=20))
+    oficina.select_by_value("99")
+    human_delay(2, 3)
+
+    log("Selecting TOMA DE HUELLAS (4010)...")
+    tramite = Select(wait_for(driver, By.ID, "tramiteGrupo[0]", timeout=20))
+    tramite.select_by_value("4010")
+    human_delay(1, 2)
+
+    log("Clicking Aceptar...")
+    wait_and_click(driver, By.ID, "btnAceptar", timeout=20)
     human_delay(2, 4)
 
-    for xpath in sel.get("intermediate_continue_xpaths", []):
-        try:
-            wait_and_click(driver, By.XPATH, xpath, timeout=8)
-            human_delay(1, 2)
-        except TimeoutException:
-            continue
+    log("Opening next step...")
+    wait_and_click(driver, By.ID, "btnEntrar", timeout=30)
+    human_delay(2, 4)
+
+    log(f"Current URL: {driver.current_url}")
+    log(f"Page title: {driver.title}")
 
     page_text = driver.page_source.lower()
     for phrase in no_slots_phrases:
         if phrase.lower() in page_text:
-            log(f"No-slots message found ('{phrase}').")
+            log(f"No-slots message found: {phrase}")
             return False, driver.current_url
 
     try:
-        wait_for(driver, By.ID, sel["calendar_indicator_id"], timeout=8)
-        log("Calendar/slot-selection element found - slots may be available!")
+        wait_for(driver, By.ID, sel["calendar_indicator_id"], timeout=10)
+        log("Calendar element found - possible appointment availability!")
         return True, driver.current_url
     except TimeoutException:
-        log("No calendar element found either - assuming no slots.")
+        log("Calendar element not found.")
         return False, driver.current_url
 
 
