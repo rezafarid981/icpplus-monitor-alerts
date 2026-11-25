@@ -86,7 +86,7 @@ def build_driver() -> webdriver.Chrome:
         "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
     )
     driver = webdriver.Chrome(options=options)
-    driver.set_page_load_timeout(60)
+    driver.set_page_load_timeout(120)
     return driver
 
 
