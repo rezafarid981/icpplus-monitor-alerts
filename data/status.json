@@ -6,14 +6,10 @@
       "procedure_name": "POLICÍA-TOMA DE HUELLAS (EXPEDICIÓN DE TARJETA) INICIAL, RENOVACIÓN, DUPLICADO Y LEY 14/2013",
       "status": "error",
       "url": null,
-      "last_check": "2026-11-25T01:55:43+00:00",
+      "last_check": "2026-11-25T08:48:54+00:00",
       "logs": [
-        "[01:52:02] Opening ICPPLUS home page...",
-        "[01:55:22] Current URL: https://icp.administracionelectronica.gob.es/icpplus/index.html",
-        "[01:55:22] Page title: icp.administracionelectronica.gob.es",
-        "[01:55:22] Page text: This site can’t be reached\nicp.administracionelectronica.gob.es took too long to respond.\nTry:\nChecking the connection\nChecking the proxy and the firewall\nERR_CONNECTION_TIMED_OUT\nReload\nDetails",
-        "[01:55:22] Selecting province 'Barcelona'...",
-        "[01:55:43] Browser/WebDriver error: Message: \nStacktrace:\n#0 0x5819ec288caa <unknown>\n#1 0x5819ebbbccc5 <unknown>\n#2 0x5819ebc027df <unknown>\n#3 0x5819ebc02971 <unknown>\n#4 0x5819ebc40734 <unknown>\n#5 0x5819ebc3edb3 <unknown>\n#6 0x5819ebc3e6c1 <unknown>\n#7 0x5819ebbf9557 <unknown>\n#8 0x5819ebbf886e <unknown>\n#9 0x5819ebbf9341 <unknown>\n#10 0x5819ec24b79c <unknown>\n#11 0x5819ec249fcd <unknown>\n#12 0x5819ec234df5 <unknown>\n#13 0x5819ec24ac0a <unknown>\n#14 0x5819ec21db99 <unknown>\n#15 0x5819ec273318 <unknown>\n#16 0x5819ec2734b5 <unknown>\n#17 0x5819ec287633 <unknown>\n#18 0x7357a78abdeb <unknown>\n#19 0x7357a793f4dc <unknown>\n"
+        "[08:46:54] Opening ICPPLUS home page...",
+        "[08:48:54] Browser/WebDriver error: Message: timeout: Timed out receiving message from renderer: -0.001\n  (Session info: chrome=157.0.8103.78)\nStacktrace:\n#0 0x5ac2f604ecaa <unknown>\n#1 0x5ac2f5982cc5 <unknown>\n#2 0x5ac2f5972b32 <unknown>\n#3 0x5ac2f59728a6 <unknown>\n#4 0x5ac2f597102b <unknown>\n#5 0x5ac2f597143f <unknown>\n#6 0x5ac2f597c9d6 <unknown>\n#7 0x5ac2f598db90 <unknown>\n#8 0x5ac2f599399b <unknown>\n#9 0x5ac2f5971d17 <unknown>\n#10 0x5ac2f5971a38 <unknown>\n#11 0x5ac2f598da53 <unknown>\n#12 0x5ac2f5a0460d <unknown>\n#13 0x5ac2f59bf557 <unknown>\n#14 0x5ac2f59be86e <unknown>\n#15 0x5ac2f59bf341 <unknown>\n#16 0x5ac2f601179c <unknown>\n#17 0x5ac2f600ffcd <unknown>\n#18 0x5ac2f5ffadf5 <unknown>\n#19 0x5ac2f6010c0a <unknown>\n#20 0x5ac2f5fe3b99 <unknown>\n#21 0x5ac2f6039318 <unknown>\n#22 0x5ac2f60394b5 <unknown>\n#23 0x5ac2f604d633 <unknown>\n#24 0x7129ab0abdeb <unknown>\n#25 0x7129ab13f4dc <unknown>\n"
       ]
     },
     "client2": {
@@ -22,16 +18,12 @@
       "procedure_name": "POLICÍA-TOMA DE HUELLAS (EXPEDICIÓN DE TARJETA) INICIAL, RENOVACIÓN, DUPLICADO Y LEY 14/2013",
       "status": "error",
       "url": null,
-      "last_check": "2026-11-25T01:59:28+00:00",
+      "last_check": "2026-11-25T08:50:56+00:00",
       "logs": [
-        "[01:55:46] Opening ICPPLUS home page...",
-        "[01:59:08] Current URL: https://icp.administracionelectronica.gob.es/icpplus/index.html",
-        "[01:59:08] Page title: icp.administracionelectronica.gob.es",
-        "[01:59:08] Page text: This site can’t be reached\nicp.administracionelectronica.gob.es took too long to respond.\nTry:\nChecking the connection\nChecking the proxy and the firewall\nERR_CONNECTION_TIMED_OUT\nReload\nDetails",
-        "[01:59:08] Selecting province 'Barcelona'...",
-        "[01:59:28] Browser/WebDriver error: Message: \nStacktrace:\n#0 0x64d9d9906caa <unknown>\n#1 0x64d9d923acc5 <unknown>\n#2 0x64d9d92807df <unknown>\n#3 0x64d9d9280971 <unknown>\n#4 0x64d9d92be734 <unknown>\n#5 0x64d9d92bcdb3 <unknown>\n#6 0x64d9d92bc6c1 <unknown>\n#7 0x64d9d9277557 <unknown>\n#8 0x64d9d927686e <unknown>\n#9 0x64d9d9277341 <unknown>\n#10 0x64d9d98c979c <unknown>\n#11 0x64d9d98c7fcd <unknown>\n#12 0x64d9d98b2df5 <unknown>\n#13 0x64d9d98c8c0a <unknown>\n#14 0x64d9d989bb99 <unknown>\n#15 0x64d9d98f1318 <unknown>\n#16 0x64d9d98f14b5 <unknown>\n#17 0x64d9d9905633 <unknown>\n#18 0x7f83540abdeb <unknown>\n#19 0x7f835413f4dc <unknown>\n"
+        "[08:48:56] Opening ICPPLUS home page...",
+        "[08:50:56] Browser/WebDriver error: Message: timeout: Timed out receiving message from renderer: -0.001\n  (Session info: chrome=157.0.8103.78)\nStacktrace:\n#0 0x558464d2bcaa <unknown>\n#1 0x55846465fcc5 <unknown>\n#2 0x55846464fb32 <unknown>\n#3 0x55846464f8a6 <unknown>\n#4 0x55846464e02b <unknown>\n#5 0x55846464e43f <unknown>\n#6 0x5584646599d6 <unknown>\n#7 0x55846466ab90 <unknown>\n#8 0x55846467099b <unknown>\n#9 0x55846464ed17 <unknown>\n#10 0x55846464ea38 <unknown>\n#11 0x55846466aa53 <unknown>\n#12 0x5584646e160d <unknown>\n#13 0x55846469c557 <unknown>\n#14 0x55846469b86e <unknown>\n#15 0x55846469c341 <unknown>\n#16 0x558464cee79c <unknown>\n#17 0x558464cecfcd <unknown>\n#18 0x558464cd7df5 <unknown>\n#19 0x558464cedc0a <unknown>\n#20 0x558464cc0b99 <unknown>\n#21 0x558464d16318 <unknown>\n#22 0x558464d164b5 <unknown>\n#23 0x558464d2a633 <unknown>\n#24 0x79dcb30abdeb <unknown>\n#25 0x79dcb313f4dc <unknown>\n"
       ]
     }
   },
-  "last_run": "2026-11-25T01:59:30+00:00"
+  "last_run": "2026-11-25T08:50:58+00:00"
 }
