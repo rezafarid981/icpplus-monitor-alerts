@@ -99,6 +99,7 @@ def wait_for(driver, by, value, timeout=20):
     return WebDriverWait(driver, timeout).until(EC.presence_of_element_located((by, value)))
 
 
+
 def check_appointments(driver, profile: dict, log) -> tuple[bool, str]:
     """
     Run through the booking flow for a single profile and return
@@ -107,7 +108,7 @@ def check_appointments(driver, profile: dict, log) -> tuple[bool, str]:
     sel = {**DEFAULT_SELECTORS, **(profile.get("selectors") or {})}
     no_slots_phrases = profile.get("no_slots_phrases") or DEFAULT_NO_SLOTS_PHRASES
 
-        log("Opening ICPPLUS home page...")
+    log("Opening ICPPLUS home page...")
     driver.set_page_load_timeout(30)
     try:
         driver.get(BASE_URL)
@@ -123,13 +124,13 @@ def check_appointments(driver, profile: dict, log) -> tuple[bool, str]:
         human_delay()
     except TimeoutException:
         pass
+
     log(f"Current URL: {driver.current_url}")
     log(f"Page title: {driver.title}")
     log(f"Page text: {driver.find_element(By.TAG_NAME, 'body').text[:1000]}")
+
     for item in driver.find_elements(By.TAG_NAME, "select"):
         log(f"SELECT id={item.get_attribute('id')} name={item.get_attribute('name')}")
-
-    
 
     log("Choosing 'sin certificado digital'...")
     wait_and_click(driver, By.XPATH, sel["no_cert_link_xpath"])
@@ -169,6 +170,7 @@ def check_appointments(driver, profile: dict, log) -> tuple[bool, str]:
     except TimeoutException:
         log("Calendar element not found.")
         return False, driver.current_url
+
 
 
 def send_email(subject: str, body: str) -> None:
