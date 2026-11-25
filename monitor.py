@@ -35,7 +35,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, WebDriverException
 
 BASE_URL = "https://icp.administracionelectronica.gob.es/icpplustieb/citar?p=8&locale=es"
-
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 PROFILES_FILE = os.path.join(DATA_DIR, "profiles.json")
 STATUS_FILE = os.path.join(DATA_DIR, "status.json")
