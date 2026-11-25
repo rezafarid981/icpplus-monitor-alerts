@@ -110,7 +110,11 @@ def check_appointments(driver, profile: dict, log) -> tuple[bool, str]:
     no_slots_phrases = profile.get("no_slots_phrases") or DEFAULT_NO_SLOTS_PHRASES
 
     log("Opening ICPPLUS home page...")
-    driver.get(BASE_URL)
+    try:
+        driver.get(BASE_URL)
+    except Exception as e:
+        log(f"Page loading warning: {e}")
+
     human_delay(2, 4)
 
     # Cookie banner (optional)
