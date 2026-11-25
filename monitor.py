@@ -125,20 +125,15 @@ def check_appointments(driver, profile: dict, log) -> tuple[bool, str]:
     log(f"Page title: {driver.title}")
     log(f"Page text: {driver.find_element(By.TAG_NAME, 'body').text[:1000]}")
     for item in driver.find_elements(By.TAG_NAME, "select"):
-        log(f"SELECT id={item.get_attribute('id')} name={item.get_attribute('name')}")
+    log(f"SELECT id={item.get_attribute('id')} name={item.get_attribute('name')}")
 
-    log(f"Selecting province '{profile['province']}'...")
-    province_select = Select(wait_for(driver, By.ID, sel["province_select_id"]))
-    province_select.select_by_visible_text(profile["province"])
-    human_delay()
-    wait_and_click(driver, By.ID, sel["province_submit_id"])
-    human_delay(2, 4)
+    
 
     log("Choosing 'sin certificado digital'...")
     wait_and_click(driver, By.XPATH, sel["no_cert_link_xpath"])
     human_delay(2, 4)
 
-        log("Selecting Barcelona office...")
+    log("Selecting Barcelona office...")
     oficina = Select(wait_for(driver, By.ID, "sede", timeout=20))
     oficina.select_by_value("99")
     human_delay(2, 3)
