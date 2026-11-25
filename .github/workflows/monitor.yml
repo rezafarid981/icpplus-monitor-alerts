@@ -34,9 +34,11 @@ jobs:
 
       - name: Install matching ChromeDriver
         uses: nanasess/setup-chromedriver@v2
-
       - name: Test ICPPLUS network access
         run: |
+          echo "Testing Google connection..."
+          curl -I -L --max-time 15 https://www.google.com
+
           echo "Testing ICPPLUS connection from GitHub runner..."
           if curl -sS -L --max-time 25 \
             -o /tmp/icpplus.html \
@@ -46,11 +48,11 @@ jobs:
           else
             echo "CURL_EXIT=$?"
           fi
+
           if [ -f /tmp/icpplus.html ]; then
             echo "BODY_BYTES=$(wc -c < /tmp/icpplus.html)"
             head -c 500 /tmp/icpplus.html
           fi
-          
       - name: Run monitor
         env:
           GMAIL_EMAIL: ${{ secrets.GMAIL_EMAIL }}
