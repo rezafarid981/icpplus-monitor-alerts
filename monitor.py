@@ -121,7 +121,7 @@ def check_appointments(driver, profile: dict, log) -> tuple[bool, str]:
         pass
     log(f"Current URL: {driver.current_url}")
     log(f"Page title: {driver.title}")
-
+    log(f"Page text: {driver.find_element(By.TAG_NAME, 'body').text[:1000]}")
     for item in driver.find_elements(By.TAG_NAME, "select"):
         log(f"SELECT id={item.get_attribute('id')} name={item.get_attribute('name')}")
 
