@@ -75,6 +75,7 @@ def human_delay(a: float = 0.4, b: float = 1.0) -> None:
 
 def build_driver() -> webdriver.Chrome:
     options = Options()
+    options.page_load_strategy = "eager"
     options.add_argument("--headless=new")
     options.add_argument("--window-size=1280,900")
     options.add_argument("--lang=es-ES")
